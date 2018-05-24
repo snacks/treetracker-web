@@ -78,7 +78,15 @@ var initMarkers = function (viewportBounds, clusterRadius) {
 
                 google.maps.event.addListener(marker, 'click', function () {
                     var currentItem = item;
-
+	            var marker = new google.maps.Marker({
+                      position: latLng,
+                      map: map,
+                      title: "Tree",
+                      icon: {
+                          url: './img/donor_pin.png',
+                          labelOrigin: new google.maps.Point(20, 22)
+			  }
+                      });
                     $('#tree_info_div').show('slide', 'swing', 600);
                     if (treeInfoDivShowing == false) {
                       treeInfoDivShowing = true;
