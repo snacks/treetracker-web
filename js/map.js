@@ -83,8 +83,8 @@ var initMarkers = function (viewportBounds, clusterRadius) {
                     if (treeInfoDivShowing == false) {
                       treeInfoDivShowing = true;
                       $('#map-canvas').animate({
-				margin: '0 0 0 400px'
-			}, 700, function() { 
+				margin: ['0 0 0 400px','swing'],	
+			}, 750, function() { 
 			//Animation Complete
 			});;
                       map.panTo(marker.getPosition());
